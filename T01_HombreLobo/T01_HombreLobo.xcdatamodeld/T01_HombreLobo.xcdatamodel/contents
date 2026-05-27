@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
+    <entity name="CharacterEntity" representedClassName="CharacterEntity" syncable="YES" codeGenerationType="none">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="characterDescription" optional="YES" attributeType="String"/>
+        <attribute name="nameEs" optional="YES" attributeType="String"/>
+        <attribute name="nameEn" optional="YES" attributeType="String"/>
+        <attribute name="descriptionEs" optional="YES" attributeType="String"/>
+        <attribute name="descriptionEn" optional="YES" attributeType="String"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+    </entity>
     <elements/>
 </model>

@@ -1,0 +1,513 @@
+{
+  "game": {
+    "title": {
+      "ca": "Els Homes Llop de Castronegre",
+      "es": "Los Hombres Lobo de Castronegro",
+      "en": "The Werewolves of Miller's Hollow"
+    },
+    "subtitle": {
+      "ca": "Joc de cartes per a 8-18 jugadors",
+      "es": "Juego de cartas para 8-18 jugadores",
+      "en": "Card game for 8 to 18 players"
+    },
+    "description": {
+      "ca": "Un narrador dirigirà la partida, alternant els dies i les nits, i cridant els personatges. Durant la nit els jugadors tancaran els ulls, i el narrador anirà despertant els diferents personatges perquè realitzin les seves accions. Quan tots han acabat, arribarà el dia. Els jugadors supervivents hauran de debatre per eliminar a un dels seus. L'objectiu dels Aldeants és linxar i eliminar tots els Homes Llop. L'objectiu dels Homes Llop és devorar tots els aldeants.",
+      "es": "Un narrador dirigirá la partida, alternando los días y las noches, y llamando a los personajes. Durante la noche los jugadores cerrarán los ojos, y el narrador irá despertando a los diferentes personajes para que realicen sus acciones. Cuando todos han terminado, llegará el día. Los jugadores supervivientes tendrán que debatir para eliminar a uno de ellos. El objetivo de los Aldeanos es linchar y eliminar a todos los Hombres Lobo. El objetivo de los Hombres Lobo es devorar a todos los aldeanos.",
+      "en": "A narrator runs the game, alternating between day and night, calling on each character in turn. At night, all players close their eyes while the narrator wakes each character to perform their actions. When everyone is done, day breaks. Surviving players debate and vote to eliminate one of their own. The villagers goal is to lynch all the Werewolves. The Werewolves goal is to devour all the villagers."
+    }
+  },
+  "instructions": [
+    {
+      "title": {
+        "ca": "Principis Generals",
+        "es": "Principios Generales",
+        "en": "General Principles"
+      },
+      "content": {
+        "ca": "Un narrador dirigirà la partida. Anirà alternant els dies i les nits, cridarà els personatges, etc. Durant la nit els jugadors tancaran els ulls, i el narrador anirà despertant els diferents personatges perquè realitzin les seves accions. Quan tots han acabat, arribarà el dia. Durant el dia tots els jugadors obriran els ulls i es revelaran les víctimes. Llavors els jugadors supervivents hauran de debatre per eliminar-ne un. Es votarà, i el que més vots obtingui serà linxat. L'objectiu dels Aldeants serà linxar i eliminar tots els Homes Llop. L'objectiu dels Homes Llop serà devorar tots els aldeants.",
+        "es": "Un narrador dirigirá la partida. Irá alternando los días y las noches, llamará a los personajes, etc. Durante la noche los jugadores cerrarán los ojos, y el narrador irá despertando a los diferentes personajes para que realicen sus acciones. Cuando todos han terminado, llegará el día. Durante el día todos los jugadores abrirán los ojos y se revelarán las víctimas. Entonces los jugadores supervivientes tendrán que debatir para eliminar a uno. Se votará, y el que más votos tenga será linchado. El objetivo de los Aldeanos es linchar a todos los Hombres Lobo. El objetivo de los Hombres Lobo es devorar a todos los aldeanos.",
+        "en": "A narrator runs the game, alternating day and night and calling on each character. At night, all players close their eyes while the narrator wakes each character to act. When done, day breaks. All players open their eyes and the victims are revealed. Surviving players debate and vote to eliminate one player. The player with the most votes is lynched and must reveal their card. The villagers goal is to eliminate all Werewolves. The Werewolves goal is to devour all villagers."
+      }
+    },
+    {
+      "title": {
+        "ca": "Desenvolupament del Joc",
+        "es": "Desarrollo del Juego",
+        "en": "Game Development"
+      },
+      "content": {
+        "ca": "Es designa el narrador. Ell prepara les cartes i en reparteix una a cada jugador cara avall. Cada jugador ha de mirar de manera discreta quin personatge li ha tocat. Ningú pot revelar el seu personatge. El narrador dorm la vila: 'Es fa de nit. La vila dorm. Els jugadors tanquen els ulls'. Després, el narrador va cridant per ordre els personatges que han de despertar durant la nit. Quan amaneix: 'Amaneixes a la vila. Tots desperten i obren els ulls. Tots excepte...'. Llavors s'anuncia quins jugadors han mort.",
+        "es": "Se designa al narrador. Él prepara las cartas y reparte una a cada jugador boca abajo. Cada jugador debe mirar discretamente qué personaje le ha tocado. Nadie puede revelar su personaje. El narrador duerme a la aldea: 'Se hace de noche. La aldea duerme. Los jugadores cierran los ojos'. Después, el narrador va llamando por orden a los personajes que tienen que despertar. Cuando amanece: 'Amanece en la aldea. Todos despiertan y abren los ojos. Todos excepto...'. Entonces se anuncia qué jugadores han muerto.",
+        "en": "A narrator is chosen. They prepare the cards and deal one to each player face down. Each player secretly looks at their character. No one may reveal their card. The narrator puts the village to sleep: Night falls. The village sleeps. Players close their eyes. The narrator then calls each night character in order. At dawn: The sun rises over the village. Everyone wakes up. Everyone except... The narrator then announces who has died."
+      }
+    },
+    {
+      "title": {
+        "ca": "La Votació",
+        "es": "La Votación",
+        "en": "The Vote"
+      },
+      "content": {
+        "ca": "Cada jugador vota al jugador que consideri culpable. El que més vots tingui mor linxat. Aquest jugador ha de mostrar la seva identitat i deixarà de jugar. Després d'això es tornarà a adormir la vila i així contínuament fins que guanyi un jugador o grup de jugadors.",
+        "es": "Cada jugador vota al jugador que considere culpable. El que más votos tenga muere linchado. Este jugador debe mostrar su identidad y dejará de jugar. Después de esto se volverá a dormir a la aldea y así continuamente hasta que gane un jugador o grupo de jugadores.",
+        "en": "Each player votes for the player they consider guilty. The player with the most votes is lynched and must reveal their identity. They are eliminated from the game. Afterward, the village goes back to sleep and the cycle continues until one player or group wins."
+      }
+    },
+    {
+      "title": {
+        "ca": "Repartiment Recomanat",
+        "es": "Repartimiento Recomendado",
+        "en": "Recommended Distribution"
+      },
+      "content": {
+        "ca": "Aldeants fa referència a qualsevol altre personatge que no sigui Home Llop. Es pot introduir qualsevol personatge que es desitgi. Per a 8-9 jugadors: 2 Homes Llop. Per a 10-11 jugadors: 2 Homes Llop. Per a 12-13 jugadors: 3 Homes Llop. Per a 14-15 jugadors: 3 Homes Llop. Per a 16-17 jugadors: 4 Homes Llop. Per a 18 jugadors: 4 Homes Llop.",
+        "es": "Aldeanos se refiere a cualquier otro personaje que no sea Hombre Lobo. Se puede introducir cualquier personaje que se desee. Para 8-9 jugadores: 2 Hombres Lobo. Para 10-11 jugadores: 2 Hombres Lobo. Para 12-13 jugadores: 3 Hombres Lobo. Para 14-15 jugadores: 3 Hombres Lobo. Para 16-17 jugadores: 4 Hombres Lobo. Para 18 jugadores: 4 Hombres Lobo.",
+        "en": "Villagers refers to any character that is not a Werewolf. Any character can be added to the game. For 8-9 players: 2 Werewolves. For 10-11 players: 2 Werewolves. For 12-13 players: 3 Werewolves. For 14-15 players: 3 Werewolves. For 16-17 players: 4 Werewolves. For 18 players: 4 Werewolves."
+      }
+    }
+  ],
+  "characters": [
+    {
+      "name": {
+        "ca": "Els Homes Llop Comuns",
+        "es": "Los Hombres Lobo Comunes",
+        "en": "The Common Werewolves"
+      },
+      "description": {
+        "ca": "Cada nit devoren un aldeà. Hi ha 4 Homes Llop Comuns en total. Objectiu: Matar la resta d'habitants de la vila.",
+        "es": "Cada noche devoran a un aldeano. Hay 4 Hombres Lobo Comunes en total. Objetivo: Matar al resto de habitantes de la aldea.",
+        "en": "Each night they devour a villager. There are 4 Common Werewolves in total. Objective: Kill all the remaining inhabitants of the village."
+      },
+      "imageName": "hombres_lobo_comunes"
+    },
+    {
+      "name": {
+        "ca": "El Llop Ferotge",
+        "es": "El Lobo Feroz",
+        "en": "The Big Bad Wolf"
+      },
+      "description": {
+        "ca": "Cada nit desperta i devora un aldeà juntament amb els altres Homes Llop. Però mentre cap Home Llop, Nen Salvatge o Gos Llop sigui eliminat, despertarà una segona vegada ell sol per devorar una segona víctima. Objectiu: Matar la resta d'habitants de la vila.",
+        "es": "Cada noche despierta y devora a un aldeano junto a los demás Hombres Lobo. Pero mientras ningún Hombre Lobo, Niño Salvaje o Perro Lobo sea eliminado, despertará una segunda vez él solo para devorar a una segunda víctima. Objetivo: Matar al resto de habitantes de la aldea.",
+        "en": "Each night he wakes up and devours a villager alongside the other Werewolves. But as long as no Werewolf, Wild Child, or Dog Wolf has been eliminated, he wakes up a second time alone to devour a second victim. Objective: Kill all the remaining inhabitants of the village."
+      },
+      "imageName": "lobo_feroz"
+    },
+    {
+      "name": {
+        "ca": "El Pare Infecte de tots els Llops",
+        "es": "El Infecto Padre de todos los Lobos",
+        "en": "The Infect Father of All Wolves"
+      },
+      "description": {
+        "ca": "Cada nit desperta i devora un aldeà juntament amb els altres Homes Llop. Però la nit que ell decideixi, després que els Homes Llop s'adormin, aixecarà la mà. Això significa que la víctima no ha mort, sinó que ha estat infectada. Només pot utilitzar el poder un cop per partida. El narrador tocarà a l'infectat, que jugarà des d'aquell moment com a Home Llop. Objectiu: Matar la resta d'habitants de la vila.",
+        "es": "Cada noche despierta y devora a un aldeano junto a los demás Hombres Lobo. Pero la noche que él decida, después de que los Hombres Lobo se vayan a dormir, él levantará la mano. Esto significa que la víctima no ha muerto, sino que ha sido infectada. Sólo puede utilizar el poder una vez por partida. El narrador tocará al infectado, que jugará desde ese momento como Hombre Lobo. Objetivo: Matar al resto de habitantes de la aldea.",
+        "en": "Each night he devours a villager with the other Werewolves. But on the night he chooses, after the Werewolves sleep, he raises his hand. This means the victim has not died but has been infected. He can only use this power once per game. The narrator touches the infected player, who now plays as a Werewolf. Objective: Kill all the remaining inhabitants of the village."
+      },
+      "imageName": "infecto_padre_lobos"
+    },
+    {
+      "name": {
+        "ca": "L'Home Llop Albí",
+        "es": "El Hombre Lobo Albino",
+        "en": "The White Werewolf"
+      },
+      "description": {
+        "ca": "Cada nit desperta i devora un aldeà juntament amb els altres Homes Llop. Però una nit de cada dues (a partir de la segona nit), despertarà després que els Homes Llop s'adormin, i podrà eliminar un Home Llop. Objectiu: Ser l'únic supervivent de la vila.",
+        "es": "Cada noche despierta y devora a un aldeano junto a los demás Hombres Lobo. Pero una noche de cada dos (a partir de la segunda noche), despertará después de que los Hombres Lobo se vayan a dormir, y podrá eliminar a un Hombre Lobo. Objetivo: Ser el único superviviente de la aldea.",
+        "en": "Each night he devours a villager with the other Werewolves. But every other night (starting from the second night), he wakes up after the other Werewolves sleep and may eliminate one Werewolf. Objective: Be the last survivor of the village."
+      },
+      "imageName": "hombre_lobo_albino"
+    },
+    {
+      "name": {
+        "ca": "L'Aldeà Comú",
+        "es": "El Aldeano Común",
+        "en": "The Simple Villager"
+      },
+      "description": {
+        "ca": "No té cap habilitat especial. Hi ha 9 Aldeants Comuns en total. Objectiu: Matar tots els Homes Llop.",
+        "es": "No tiene ninguna habilidad especial. Hay 9 Aldeanos Comunes en total. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Has no special abilities. There are 9 Simple Villagers in total. Objective: Kill all the Werewolves."
+      },
+      "imageName": "aldeano_comun"
+    },
+    {
+      "name": {
+        "ca": "L'Aldeà-Aldeà",
+        "es": "El Aldeano-Aldeano",
+        "en": "The Pure Soul"
+      },
+      "description": {
+        "ca": "No té cap habilitat especial, excepte que el dibuix d'Aldeà està imprès per ambdós costats de la carta. Per tant, tothom sap amb certesa que es tracta d'un Aldeà. Objectiu: Matar tots els Homes Llop.",
+        "es": "No tiene ninguna habilidad especial, salvo que el dibujo de Aldeano está impreso por ambos lados de la carta. Por tanto todo el mundo sabe con certeza que se trata de un Aldeano. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Has no special abilities, except that the Villager image is printed on both sides of the card. Therefore, everyone knows with certainty that this player is a Villager. Objective: Kill all the Werewolves."
+      },
+      "imageName": "aldeano_comun"
+    },
+    {
+      "name": {
+        "ca": "La Vident",
+        "es": "La Vidente",
+        "en": "The Seer"
+      },
+      "description": {
+        "ca": "Cada nit desperta i pot veure la carta d'algun jugador. Objectiu: Matar tots els Homes Llop.",
+        "es": "Cada noche despierta y puede ver la carta de algún jugador. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Each night she wakes up and may look at the card of any player. Objective: Kill all the Werewolves."
+      },
+      "imageName": "la_vidente"
+    },
+    {
+      "name": {
+        "ca": "Cupido",
+        "es": "Cupido",
+        "en": "Cupid"
+      },
+      "description": {
+        "ca": "Desperta la primera nit i designa 2 jugadors, els quals quedaran enamorats durant tota la partida. Pot designar-se a si mateix. Si un dels enamorats mor, l'altre també mor automàticament. Un enamorat mai pot votar contra la seva parella. Si un dels enamorats és un Aldeà i l'altre un Home Llop o el Flautista, l'objectiu per a ambdós canvia. Objectiu: Matar tots els Homes Llop.",
+        "es": "Despierta la primera noche y designa a 2 jugadores, los cuales quedarán enamorados durante toda la partida. Puede designarse a sí mismo. Si uno de los enamorados muere, el otro también muere automáticamente. Un enamorado nunca puede votar en contra de su pareja. Si uno de los enamorados es un Aldeano y el otro un Hombre Lobo o el Flautista, el objetivo para ambos cambia. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Wakes up on the first night and designates 2 players who will be in love for the whole game. He may designate himself. If one lover dies, the other also dies. A lover can never vote against their partner. If one lover is a Villager and the other a Werewolf or Pied Piper, both objectives change. Objective: Kill all the Werewolves."
+      },
+      "imageName": "cupido"
+    },
+    {
+      "name": {
+        "ca": "La Bruixa",
+        "es": "La Bruja",
+        "en": "The Witch"
+      },
+      "description": {
+        "ca": "Desperta totes les nits. Pot donar a un jugador una poció curativa, que el ressuscita; o una poció verinosa, que el mata. Només pot usar cada poció un cop per partida. Es pot ressuscitar a si mateixa. Objectiu: Matar tots els Homes Llop.",
+        "es": "Despierta todas las noches. Puede darle a un jugador una poción curativa, que le resucita; o una poción venenosa, que lo mata. Sólo puede usar cada poción una vez por partida. Se puede resucitar a sí misma. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Wakes up every night. She can give a player a healing potion to revive them, or a poison potion to kill them. She can only use each potion once per game. She may revive herself. Objective: Kill all the Werewolves."
+      },
+      "imageName": "la_bruja"
+    },
+    {
+      "name": {
+        "ca": "El Caçador",
+        "es": "El Cazador",
+        "en": "The Hunter"
+      },
+      "description": {
+        "ca": "Si mor ha de triar un altre jugador a qui dispararà i morirà. Si el Caçador és l'enamorat d'un jugador eliminat, també haurà de disparar. Objectiu: Matar tots els Homes Llop.",
+        "es": "Si muere debe elegir otro jugador al que disparará y morirá. Si el Cazador es el enamorado de un jugador eliminado, también deberá disparar. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "If he dies, he must choose another player to shoot, who will also die. If the Hunter is the lover of an eliminated player, he must also shoot. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_cazador"
+    },
+    {
+      "name": {
+        "ca": "La Nena Petita",
+        "es": "La Niña Pequeña",
+        "en": "The Little Girl"
+      },
+      "description": {
+        "ca": "Pot entredobre els ulls mentre els Homes Llop es desperten per la nit. Si és descoberta, mor automàticament en silenci en lloc de la víctima que haguessin triat els Homes Llop. Només pot espiar durant la nit dels Homes Llop. Objectiu: Matar tots els Homes Llop.",
+        "es": "Puede entreabrir los ojos mientras los Hombres Lobo se despiertan por la noche. Si es descubierta muere automáticamente en silencio en lugar de la víctima que eligiesen los Hombres Lobo. Sólo puede espiar durante la noche de los Hombres Lobo. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "She may peek while the Werewolves are waking up at night. If caught, she dies automatically and silently instead of the victim chosen by the Werewolves. She can only spy during the Werewolves night. Objective: Kill all the Werewolves."
+      },
+      "imageName": "la_nina_pequena"
+    },
+    {
+      "name": {
+        "ca": "El Protector",
+        "es": "El Protector",
+        "en": "The Bodyguard"
+      },
+      "description": {
+        "ca": "Desperta totes les nits abans que els Homes Llop i pot triar un jugador a qui protegirà. Aquell jugador no podrà ser devorat pels Homes Llop durant aquella nit. Pot protegir-se a si mateix. No pot protegir el mateix jugador dues nits seguides. No pot protegir la nena petita. No protegeix del Flautista ni de la infecció del Pare Infecte. Objectiu: Matar tots els Homes Llop.",
+        "es": "Despierta todas las noches antes que los Hombres Lobo y puede elegir a un jugador al que protegerá. Ese jugador no podrá ser devorado por los Hombres Lobo durante esa noche. Puede protegerse a sí mismo. No puede proteger al mismo jugador dos noches seguidas. No puede proteger a la niña pequeña. No protege del Flautista ni de la infección del Infecto Padre. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Wakes up every night before the Werewolves and may choose a player to protect. That player cannot be devoured that night. He may protect himself. He cannot protect the same player two nights in a row. He cannot protect the Little Girl. He does not protect against the Pied Piper or the Infect Father infection. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_protector"
+    },
+    {
+      "name": {
+        "ca": "L'Ancià",
+        "es": "El Anciano",
+        "en": "The Elder"
+      },
+      "description": {
+        "ca": "Els Homes Llop l'han d'atacar 2 vegades per matar-lo. La primera vegada que és atacat, no mor i no es mostra la seva carta. El linxament popular, el tret del Caçador o la navalla del Barber maten l'ancià al primer intent. Però si això passa, tots els aldeants perden els seus poders especials fins al final de la partida. No l'afecta la infecció del Pare Infecte si és la primera vegada que el mosseguen. Objectiu: Matar tots els Homes Llop.",
+        "es": "Los Hombres Lobo deben atacarle 2 veces para matarlo. La primera vez que es atacado, no muere y no se muestra su carta. El linchamiento, el disparo del Cazador o la navaja del Barbero matan al anciano al primer intento. Pero si esto sucede, todos los aldeanos pierden sus poderes especiales hasta el final de la partida. No le afecta la infección del Infecto Padre si es la primera vez que le muerden. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "The Werewolves must attack him twice to kill him. The first time he is attacked, he does not die and his card is not shown. Lynching, the Hunters shot, or the Barbers blade kill the Elder on the first attempt, causing all Villagers to lose their special powers for the rest of the game. The Infect Fathers infection does not affect him the first time. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_anciano"
+    },
+    {
+      "name": {
+        "ca": "El Cap de Turc",
+        "es": "El Cabeza de Turco",
+        "en": "The Scapegoat"
+      },
+      "description": {
+        "ca": "Si hi ha un empat per decidir el linxament, és el Cap de Turc el que serà linxat. Si és linxat triarà quins Aldeants poden votar al proper linxament. Si es tria un sol Aldeà, és probable que el devoren aquella nit i no hi hagi linxament l'endemà. Objectiu: Matar tots els Homes Llop.",
+        "es": "Si hay un empate para decidir el linchamiento, es el Cabeza de Turco el que será linchado. Si es linchado elegirá qué Aldeanos pueden votar en el próximo linchamiento. Si se elige a un solo Aldeano, es probable que le devoren esa noche y no haya linchamiento al día siguiente. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "If there is a tie to decide the lynching, the Scapegoat is lynched instead. If lynched, he chooses which Villagers may vote in the next lynching. If only one Villager is chosen, they may be devoured that night, leaving no lynching the next day. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_cabeza_turco"
+    },
+    {
+      "name": {
+        "ca": "El Beneit del Poble",
+        "es": "El Tonto de la Aldea",
+        "en": "The Village Idiot"
+      },
+      "description": {
+        "ca": "Si la Vila vota en contra seu, ensenya la seva carta i no el poden linxar. Si passa això perd el dret a vot durant la resta de la partida. Si era l'Agutzil, perd el càrrec per a la resta de la partida. Objectiu: Matar tots els Homes Llop.",
+        "es": "Si la Aldea vota en su contra, enseña su carta y no le podrán linchar. Si eso ocurre pierde su derecho a voto durante el resto de la partida. Si era Alguacil, pierde el cargo para el resto de la partida. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "If the Village votes against him, he reveals his card and cannot be lynched. He then loses his right to vote for the rest of the game. If he was the Sheriff, he loses the title. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_tonto_aldea"
+    },
+    {
+      "name": {
+        "ca": "Les Dues Germanes",
+        "es": "Las Dos Hermanas",
+        "en": "The Two Sisters"
+      },
+      "description": {
+        "ca": "Desperten la primera nit i es reconeixen. De tant en tant poden tornar a despertar, quan el narrador ho estime oportú, i poden consultar-se en silenci quines decisions prendre. Hi ha 2 cartes de les Dues Germanes. Objectiu: Matar tots els Homes Llop.",
+        "es": "Despiertan la primera noche y se reconocen. De vez en cuando pueden volver a despertar, cuando el narrador lo estime oportuno, y pueden consultarse en silencio qué decisiones tomar. Hay 2 cartas de las Dos Hermanas. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "They wake up on the first night and recognize each other. Occasionally they may wake up again when the narrator sees fit, and consult silently on decisions. There are 2 Two Sisters cards. Objective: Kill all the Werewolves."
+      },
+      "imageName": "las_dos_hermanas"
+    },
+    {
+      "name": {
+        "ca": "Els Tres Germans",
+        "es": "Los Tres Hermanos",
+        "en": "The Three Brothers"
+      },
+      "description": {
+        "ca": "Desperten la primera nit i es reconeixen. De tant en tant poden tornar a despertar, quan el narrador ho estime oportú, i poden consultar-se en silenci quines decisions prendre. Hi ha 3 cartes dels Tres Germans. Objectiu: Matar tots els Homes Llop.",
+        "es": "Despiertan la primera noche y se reconocen. De vez en cuando pueden volver a despertar, cuando el narrador lo estime oportuno, y pueden consultarse en silencio qué decisiones tomar. Hay 3 cartas de los Tres Hermanos. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "They wake up on the first night and recognize each other. Occasionally they may wake up again when the narrator sees fit, and consult silently on decisions. There are 3 Three Brothers cards. Objective: Kill all the Werewolves."
+      },
+      "imageName": "los_tres_hermanos"
+    },
+    {
+      "name": {
+        "ca": "El Guineu",
+        "es": "El Zorro",
+        "en": "The Fox"
+      },
+      "description": {
+        "ca": "Desperta durant la nit i pot triar un grup de 3 jugadors veïns. Si en aquell grup hi ha almenys 1 Home Llop, el narrador li farà un gest afirmatiu. Si en el grup no hi ha cap Home Llop, el Guineu perdrà el seu poder per a la resta de la partida. Desperta totes les nits, però no està obligat a utilitzar el seu poder. Objectiu: Matar tots els Homes Llop.",
+        "es": "Despierta durante la noche y puede elegir a un grupo de 3 jugadores vecinos. Si en ese grupo hay al menos 1 Hombre Lobo, el narrador le hará un gesto afirmativo. Si en el grupo no hay ningún Hombre Lobo, el Zorro perderá su poder para el resto de la partida. Despierta todas las noches, pero no está obligado a utilizar su poder. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Wakes up at night and may choose a group of 3 neighboring players. If at least 1 Werewolf is in that group, the narrator nods. If there are no Werewolves in the group, the Fox loses his power for the rest of the game. He wakes every night but is not obligated to use his power. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_zorro"
+    },
+    {
+      "name": {
+        "ca": "El Domador d'Ossos",
+        "es": "El Domador de Osos",
+        "en": "The Bear Tamer"
+      },
+      "description": {
+        "ca": "Cada matí, després de descobrir les víctimes, si hi ha almenys un Home Llop adjacent al Domador d'Ossos, el narrador emetrà un grunyit. Només es tindran en compte els veïns que encara estiguin en joc. Si el Domador d'Ossos és infectat pel Pare Infecte, el narrador grunyirà tots els torns fins que sigui eliminat. Objectiu: Matar tots els Homes Llop.",
+        "es": "Cada mañana, después de descubrir las víctimas, si hay al menos un Hombre Lobo adyacente al Domador de Osos, el narrador emitirá un gruñido. Sólo se tendrá en cuenta a los vecinos que todavía estén en juego. Si el Domador de Osos está infectado por el Infecto Padre, el narrador gruñirá todos los turnos hasta que sea eliminado. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Every morning, after the victims are revealed, if at least one Werewolf is adjacent to the Bear Tamer, the narrator growls. Only living neighbors count. If the Bear Tamer is infected by the Infect Father, the narrator growls every turn until eliminated. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_domador_osos"
+    },
+    {
+      "name": {
+        "ca": "El Jutge Tartamut",
+        "es": "El Juez Tartamudo",
+        "en": "The Stuttering Judge"
+      },
+      "description": {
+        "ca": "Una vegada per partida, el Jutge Tartamut pot decidir que hi hagi dues votacions amb linxament seguides. El Jutge Tartamut notificarà al narrador la seva decisió mitjançant un gest especial durant el primer linxament. En acabar, el narrador iniciarà la segona votació. Objectiu: Matar tots els Homes Llop.",
+        "es": "Una vez en cada partida, el Juez Tartamudo puede decidir que haya dos votaciones con linchamiento seguidas. El Juez Tartamudo notificará al narrador su decisión mediante un gesto especial durante el primer linchamiento. Al terminar, el narrador comenzará la segunda votación. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Once per game, the Stuttering Judge may call for two consecutive lynching votes. He signals the narrator with a special gesture during the first lynching. When it ends, the narrator starts the second vote immediately. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_juez_tartamudo"
+    },
+    {
+      "name": {
+        "ca": "El Cavaller de l'Espasa Rovellada",
+        "es": "El Caballero de la Espada Oxidada",
+        "en": "The Knight with the Rusty Sword"
+      },
+      "description": {
+        "ca": "Si és devorat queda eliminat de la partida, però un dels Homes Llop emmalaltirà. L'Home Llop que estigui situat més a prop d'ell per la seva esquerra, morirà la nit següent. L'Home Llop mor durant la nit, i s'anuncia l'endemà. Objectiu: Matar tots els Homes Llop.",
+        "es": "Si es devorado queda eliminado de la partida, pero uno de los Hombres Lobo enfermará. El Hombre Lobo que esté situado más cerca de él por su izquierda, morirá la noche siguiente. El Hombre Lobo muere durante la noche, y se anuncia al día siguiente. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "If devoured he is eliminated, but one Werewolf becomes sick. The Werewolf closest to him on his left will die the following night. The Werewolf dies during the night and is announced the next day. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_caballero_espada"
+    },
+    {
+      "name": {
+        "ca": "L'Agutzil",
+        "es": "El Alguacil",
+        "en": "The Sheriff"
+      },
+      "description": {
+        "ca": "És un càrrec públic que s'entrega a un jugador per votació. Els vots de l'Agutzil compten el doble. No es pot rebutjar el càrrec. En morir, es nomena un altre jugador com a successor. Objectiu: Matar tots els Homes Llop.",
+        "es": "Es un cargo público que se entrega a un jugador por votación. Los votos del Alguacil cuentan el doble. No se puede rechazar el cargo. Al morir, se nombra a otro jugador como sucesor. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "A public role given to a player by vote. The Sheriffs votes count double. The role cannot be refused. Upon death, another player is named as successor. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_alguacil"
+    },
+    {
+      "name": {
+        "ca": "El Lladre",
+        "es": "El Ladrón",
+        "en": "The Thief"
+      },
+      "description": {
+        "ca": "Per jugar amb el lladre cal afegir dues cartes extra d'Aldeà Comú. Després de repartir, els dos personatges que sobrin es deixen a la taula cara avall. Durant la primera nit el lladre pot mirar aquelles cartes i quedar-se'n una. Si les dues cartes són Homes Llop, està obligat a canviar la seva carta. Objectiu: Si es queda com a Lladre haurà de matar els Homes Llop. Si es queda la carta que robi, haurà de complir l'objectiu d'aquell personatge.",
+        "es": "Para jugar con el ladrón hay que añadir dos cartas extra de Aldeano Común. Después de repartir, los dos personajes que sobren se dejan en la mesa boca abajo. Durante la primera noche el ladrón puede mirar esas cartas y quedarse con una. Si las dos cartas son Hombres Lobo, está obligado a cambiar su carta. Objetivo: Si se queda como Ladrón tendrá que matar a los Hombres Lobo. Si se queda la carta que robe, tendrá que cumplir el objetivo de ese personaje.",
+        "en": "To play with the Thief, add two extra Villager cards. After dealing, the two leftover cards are placed face down. On the first night the Thief may look at them and keep one. If both are Werewolves, he must swap. Objective: If he stays as Thief, kill the Werewolves. If he takes a card, fulfill that characters objective."
+      },
+      "imageName": "el_ladron"
+    },
+    {
+      "name": {
+        "ca": "La Serventa Abnegada",
+        "es": "La Abnegada Sirvienta",
+        "en": "The Devoted Servant"
+      },
+      "description": {
+        "ca": "Abans que es reveli la carta d'un jugador linxat, la Serventa Abnegada pot revelar la seva identitat i canviar la seva carta per la de l'altre jugador, assumint el rol del mateix fins al final de la partida. Si està enamorada no pot utilitzar el seu poder. Objectiu: Matar tots els Homes Llop.",
+        "es": "Antes de que se revele la carta de un jugador linchado, la Abnegada Sirvienta puede revelar su identidad y cambiar su carta por la del otro jugador, asumiendo el rol de la misma hasta el final de la partida. Si está enamorada no puede utilizar su poder. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Before a lynched players card is revealed, the Devoted Servant may reveal her identity and swap her card with that players, taking on their role for the rest of the game. She cannot use her power if she is in love. Objective: Kill all the Werewolves."
+      },
+      "imageName": "la_sirvienta"
+    },
+    {
+      "name": {
+        "ca": "El Comediant",
+        "es": "El Comediante",
+        "en": "The Actor"
+      },
+      "description": {
+        "ca": "Abans de la partida el narrador tria 3 personatges amb poders especials. Després de repartir els personatges, deixa els 3 sobrants cara amunt al centre de la taula. Cada nit, el Comediant pot utilitzar el poder d'una de les cartes fins a la nit següent. Després d'utilitzar el poder, es retira la carta de la taula. Cap de les 3 cartes pot ser un Home Llop. Objectiu: Matar tots els Homes Llop, excepte quan usa els poders dels altres personatges.",
+        "es": "Antes de la partida el narrador elige 3 personajes con poderes especiales. Tras repartir los personajes, deja los 3 sobrantes boca arriba en el centro de la mesa. Cada noche, el Comediante puede utilizar el poder de una de las cartas hasta la noche siguiente. Después de utilizar el poder, se retira la carta de la mesa. Ninguna de las 3 cartas puede ser un Hombre Lobo. Objetivo: Matar a todos los Hombres Lobo, excepto cuando usa los poderes de los otros personajes.",
+        "en": "Before the game, the narrator chooses 3 special characters and places them face up in the center of the table. Each night, the Actor may use the power of one of those cards until the next night. After using the power, the card is removed. None of the 3 cards may be a Werewolf. Objective: Kill all the Werewolves, except when using other characters powers."
+      },
+      "imageName": "el_comediante"
+    },
+    {
+      "name": {
+        "ca": "El Nen Salvatge",
+        "es": "El Niño Salvaje",
+        "en": "The Wild Child"
+      },
+      "description": {
+        "ca": "El Nen Salvatge és al principi un Aldeà. Durant la primera nit triarà un jugador com a model. Si aquell jugador mor, el Nen Salvatge es transformarà en Home Llop fins al final de la partida. Mentre el jugador triiat segueixi viu actuarà com a Aldeà. Objectiu: Complir l'objectiu del seu personatge.",
+        "es": "El Niño Salvaje es al principio un Aldeano. Durante la primera noche elegirá un jugador como modelo. Si ese jugador muere, el Niño Salvaje se transformará en Hombre Lobo hasta el final de la partida. Mientras el jugador elegido siga vivo actuará como Aldeano. Objetivo: Cumplir el objetivo de su personaje.",
+        "en": "The Wild Child starts as a Villager. On the first night he chooses a role model. If that player dies, the Wild Child transforms into a Werewolf for the rest of the game. As long as the chosen player lives, he acts as a Villager. Objective: Fulfill the objective of his current character."
+      },
+      "imageName": "el_nino_salvaje"
+    },
+    {
+      "name": {
+        "ca": "El Gos Llop",
+        "es": "El Perro Lobo",
+        "en": "The Dog Wolf"
+      },
+      "description": {
+        "ca": "Durant la primera nit decidirà si és un Aldeà Comú o un Home Llop. No es pot canviar la decisió. Objectiu: Complir l'objectiu del personatge triat.",
+        "es": "Durante la primera noche decidirá si es un Aldeano Común o un Hombre Lobo. No se puede cambiar la decisión. Objetivo: Cumplir el objetivo del personaje elegido.",
+        "en": "On the first night he decides whether to be a Common Villager or a Werewolf. The decision cannot be changed. Objective: Fulfill the objective of the chosen character."
+      },
+      "imageName": "el_perro_lobo"
+    },
+    {
+      "name": {
+        "ca": "L'Àngel",
+        "es": "El Ángel",
+        "en": "The Angel"
+      },
+      "description": {
+        "ca": "Si l'Àngel és en joc, la partida comença amb una votació dels Aldeants. Si l'Àngel aconsegueix que sigui ell el linxat, o el primer en ser devorat, guanya la partida. Si no ho aconsegueix, es converteix en un Aldeà Comú. Objectiu: Aconseguir que el linxin o el devoren el primer.",
+        "es": "Si el Ángel está en juego, la partida empieza con una votación de los Aldeanos. Si el Ángel consigue que sea él el linchado, o el primero en ser devorado, gana la partida. Si no lo consigue, se convierte en un Aldeano Común. Objetivo: Conseguir que le linchen o le devoren el primero.",
+        "en": "If the Angel is in play, the game begins with a vote by the Villagers. If the Angel manages to get lynched or devoured first, he wins the game. If he fails, he becomes a Common Villager. Objective: Get lynched or devoured first."
+      },
+      "imageName": "el_angel"
+    },
+    {
+      "name": {
+        "ca": "El Flautista",
+        "es": "El Flautista",
+        "en": "The Pied Piper"
+      },
+      "description": {
+        "ca": "Es desperta cada nit i encantarà dos jugadors. Quan tot el poble estigui encantat guanya la partida. Si l'infecten es converteix en un Home Llop Comú. El Protector no protegeix del seu encantament. La Bruixa no cura el seu encantament. L'encantament no es transfereix entre enamorats. Objectiu: Encantar tots els jugadors.",
+        "es": "Se despierta cada noche y hechizará a dos jugadores. Cuando todo el pueblo esté hechizado gana la partida. Si le infectan se convierte en un Hombre Lobo Común. El Protector no protege de su hechizo. La Bruja no cura su hechizo. El hechizo no se transfiere entre enamorados. Objetivo: Hechizar a todos los jugadores.",
+        "en": "He wakes up every night and enchants two players. When all the villagers are enchanted he wins the game. If infected he becomes a Common Werewolf. The Bodyguard does not protect against his enchantment. The Witch cannot cure his enchantment. Enchantment is not transferred between lovers. Objective: Enchant all players."
+      },
+      "imageName": "el_flautista"
+    },
+    {
+      "name": {
+        "ca": "L'Abominable Sectari",
+        "es": "El Abominable Sectario",
+        "en": "The Prejudiced Manipulator"
+      },
+      "description": {
+        "ca": "Abans de començar la partida el narrador divideix la Vila en 2 grups (per sexe, els que porten ulleres, etc.), i ho comunica a la Vila en veu alta. L'Abominable Sectari pertanyerà a un d'aquells grups. Objectiu: Matar tots els jugadors del grup al qual no pertany.",
+        "es": "Antes de empezar la partida el narrador divide la Aldea en 2 grupos (por sexo, los que llevan gafas, etc.), y se lo comunica a la Aldea en voz alta. El Abominable Sectario pertenecerá a uno de esos grupos. Objetivo: Matar a todos los jugadores del grupo al que no pertenece.",
+        "en": "Before the game, the narrator divides the Village into 2 groups (by gender, glasses, etc.) and announces this to everyone. The Prejudiced Manipulator belongs to one of those groups. Objective: Kill all the players of the group he does not belong to."
+      },
+      "imageName": "el_sectario"
+    },
+    {
+      "name": {
+        "ca": "El Piròman",
+        "es": "El Pirómano",
+        "en": "The Pyromaniac"
+      },
+      "description": {
+        "ca": "Només es pot jugar amb l'expansió de La Vila. Desperta per la nit i pot assenyalar un dels edificis per cremar-lo. El narrador posarà a l'edifici el marcador de foc. Només pot usar aquest poder un cop per partida. L'ocupant es converteix en rodamón. Si l'edifici pertanyia a una víctima dels Homes Llop, l'Home Llop més proper a la víctima per la dreta mor carbonitzat i la víctima se salva. Objectiu: Matar tots els Homes Llop.",
+        "es": "Sólo se puede jugar con la expansión de La Aldea. Despierta por la noche y puede señalar uno de los edificios para quemarlo. El narrador pondrá en el edificio el marcador de fuego. Sólo puede usar este poder una vez por partida. El ocupante se convierte en vagabundo. Si el edificio pertenecía a una víctima de los Hombres Lobo, el Hombre Lobo más cercano a la víctima por la derecha muere carbonizado y la víctima se salva. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Only playable with The Village expansion. Wakes up at night and may mark one building to burn. The narrator places the fire marker on it. Can only be used once per game. The occupant becomes a vagrant. If the building belonged to a Werewolf victim, the nearest Werewolf on the right dies burned and the victim is saved. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_piromano"
+    },
+    {
+      "name": {
+        "ca": "El Corb",
+        "es": "El Cuervo",
+        "en": "The Raven"
+      },
+      "description": {
+        "ca": "Només es pot jugar amb l'expansió de La Vila. Quan els Homes Llop s'adormin, es desperta i pot assenyalar un jugador del qual sospiti. El narrador posa el marcador del Corb a l'edifici d'aquell jugador. Aquest jugador tindrà 2 vots extra a la propera votació. No pot assenyalar un rodamón. Objectiu: Matar tots els Homes Llop.",
+        "es": "Sólo se puede jugar con la expansión de La Aldea. Cuando los Hombres Lobo se vayan a dormir, se despierta y puede señalar a un jugador del que sospeche. El narrador pone el marcador del Cuervo en el edificio de ese jugador. Este jugador tendrá 2 votos más en la siguiente votación. No puede señalar a un vagabundo. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Only playable with The Village expansion. When the Werewolves go to sleep, he wakes up and marks a suspect player. The narrator places the Raven marker on that player building. That player will have 2 extra votes in the next vote. Cannot mark a vagrant. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_cuervo"
+    },
+    {
+      "name": {
+        "ca": "El Guardià",
+        "es": "El Guardia",
+        "en": "The Town Crier"
+      },
+      "description": {
+        "ca": "Només es pot jugar amb les cartes d'event de l'expansió de Lluna Nova. És un càrrec públic designat per l'Agutzil. El narrador tria el nombre de cartes d'event que vulgui i les donarà al Guardià. Cada matí, quan el Guardià decideixi, pot llegir en veu alta una de les cartes a la seva elecció. Objectiu: Matar tots els Homes Llop.",
+        "es": "Sólo se puede jugar con las cartas de evento de la expansión de Luna Nueva. Es un cargo público designado por el Alguacil. El narrador elige el número de cartas de evento que quiera y se las dará al Guardia. Cada mañana, cuando el Guardia decida, puede leer en alto una de las cartas a su elección. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Only playable with event cards from the New Moon expansion. A public role designated by the Sheriff. The narrator gives the Town Crier any number of event cards. Each morning the Town Crier may read one card aloud when they choose. Objective: Kill all the Werewolves."
+      },
+      "imageName": "el_guardia"
+    },
+    {
+      "name": {
+        "ca": "La Gitana",
+        "es": "La Gitana",
+        "en": "The Gypsy"
+      },
+      "description": {
+        "ca": "Només es pot jugar amb les cartes d'event de l'expansió de Lluna Nova. El narrador agafa 5 cartes d'Espiritisme i les conserva. Cada nit el narrador desperta la Gitana i li preguntarà si vol usar el seu poder. Si és així, el narrador llegirà les 4 preguntes d'una de les cartes. La gitana validarà una de les preguntes i assenyalarà un jugador. L'endemà, aquell jugador llegirà la pregunta assenyalada i l'últim jugador eliminat haurà de contestar-la amb sí o no. Objectiu: Matar tots els Homes Llop.",
+        "es": "Sólo se puede jugar con las cartas de evento de la expansión de Luna Nueva. El narrador coge 5 cartas de Espiritismo y las conserva. Cada noche el narrador despierta a la Gitana y le preguntará si quiere usar su poder. Si es así, el narrador leerá las 4 preguntas de una de las cartas. La gitana validará una de las preguntas y señalará a un jugador. Al día siguiente, ese jugador leerá la pregunta señalada y el último jugador eliminado deberá contestarla con sí o no. Objetivo: Matar a todos los Hombres Lobo.",
+        "en": "Only playable with event cards from the New Moon expansion. The narrator keeps 5 Seance cards. Each night the narrator wakes the Gypsy and asks if she wants to use her power. If so, the narrator reads 4 questions from one Seance card. The Gypsy validates one and points to a player. The next day, that player reads the question and the last eliminated player answers yes or no. Objective: Kill all the Werewolves."
+      },
+      "imageName": "la_gitana"
+    }
+  ]
+}
