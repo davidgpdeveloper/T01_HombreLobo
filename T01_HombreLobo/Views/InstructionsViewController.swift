@@ -1,97 +1,80 @@
-// Controlador de la pantalla d'instruccions (Tab 2)
-import UIKit
+// Vista de la pantalla d'instruccions (Tab 2) — SwiftUI
+import SwiftUI
 
-class InstructionsViewController: UIViewController {
+struct InstructionsView: View {
 
-    // MARK: - Propietats
-    private var sections: [InstructionSection] = []
-    private let tableView = UITableView(frame: .zero, style: .insetGrouped)
+    @EnvironmentObject var languageManager: LanguageManager
+    @EnvironmentObject var themeManager: ThemeManager
+    @State private var sections: [InstructionSection] = []
+    @State private var showingLanguagePicker = false
 
-    // MARK: - Cicle de vida
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-        setupLanguageBarButton()
-        loadInstructions()
-        NotificationCenter.default.addObserver(self,
-            selector: #selector(onLanguageChanged),
-            name: LanguageManager.languageChangedNotification, object: nil)
-        NotificationCenter.default.addObserver(self,
-            selector: #selector(onThemeChanged),
-            name: ThemeManager.themeChangedNotification, object: nil)
-    }
-
-    deinit { NotificationCenter.default.removeObserver(self) }
-
-    // MARK: - Contingut
-    private func loadInstructions() {
-        guard let gameData = JSONLoaderService.loadGameData() else { return }
-        sections = gameData.instructions
-        updateTitle()
-        tableView.reloadData()
-    }
-
-    private func updateTitle() {
-        switch LanguageManager.shared.currentLanguage {
-        case .catalan: title = "Instruccions"
-        case .spanish: title = "Instrucciones"
-        case .english: title = "Instructions"
+    var body: some View {
+        List {
+            ForEach(sections.indices, id: \.self) { idx in
+                Section(header:
+                    Text(sections[idx].title.localized(for: languageManager.currentLanguage))
+                ) {
+                    Text(sections[idx].content.localized(for: languageManager.currentLanguage))
+                        .font(.system(size: 15))
+                        .foregroundColor(.appText)
+                        .listRowBackground(Color.appCardBackground)
+                }
+            }
         }
-        navigationItem.title = title
-        tabBarItem.title = title
+        .listStyle(.insetGrouped)
+        .scrollContentBackground(.hidden)
+        .background(Color.appTableBackground.ignoresSafeArea())
+        .navigationTitle(navigationTitle)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar { toolbarContent }
+        .confirmationDialog(pickerTitle, isPresented: $showingLanguagePicker, titleVisibility: .visible) {
+            ForEach(AppLanguage.allCases, id: \.self) { lang in
+                Button("\(lang.flagEmoji) \(lang.displayName)") {
+                    languageManager.currentLanguage = lang
+                }
+            }
+            Button(cancelTitle, role: .cancel) {}
+        }
+        .onAppear { sections = JSONLoaderService.loadGameData()?.instructions ?? [] }
     }
 
-    @objc private func onLanguageChanged() {
-        loadInstructions()
-        setupLanguageBarButton()
+    @ToolbarContentBuilder
+    private var toolbarContent: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing) {
+            HStack(spacing: 12) {
+                Button {
+                    themeManager.currentTheme = themeManager.currentTheme.toggled
+                } label: {
+                    Image(systemName: themeManager.currentTheme.iconName)
+                }
+                Button(languageManager.currentLanguage.barButtonTitle) {
+                    showingLanguagePicker = true
+                }
+            }
+        }
     }
 
-    @objc private func onThemeChanged() {
-        setupLanguageBarButton()
-        // Actualitza colors de les cel·les visibles
-        tableView.backgroundColor = .appTableBackground
-        view.backgroundColor = .appTableBackground
-        tableView.reloadData()
+    private var navigationTitle: String {
+        switch languageManager.currentLanguage {
+        case .catalan: return "Instruccions"
+        case .spanish: return "Instrucciones"
+        case .english: return "Instructions"
+        }
     }
 
-    // MARK: - Configuració UI
-    private func setupUI() {
-        view.backgroundColor = .appTableBackground
-        tableView.backgroundColor = .appTableBackground
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(tableView)
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
-    }
-}
-
-// MARK: - UITableViewDataSource & Delegate
-extension InstructionsViewController: UITableViewDataSource, UITableViewDelegate {
-
-    func numberOfSections(in tableView: UITableView) -> Int { sections.count }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { 1 }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        sections[section].title.localized()
+    private var pickerTitle: String {
+        switch languageManager.currentLanguage {
+        case .catalan: return "Selecciona l'idioma"
+        case .spanish: return "Seleccionar idioma"
+        case .english: return "Select language"
+        }
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        var content = cell.defaultContentConfiguration()
-        content.text = sections[indexPath.section].content.localized()
-        content.textProperties.numberOfLines = 0
-        content.textProperties.color = .appText
-        cell.contentConfiguration = content
-        cell.backgroundColor = .appCardBackground
-        cell.selectionStyle = .none
-        return cell
+    private var cancelTitle: String {
+        switch languageManager.currentLanguage {
+        case .catalan: return "Cancel·lar"
+        case .spanish: return "Cancelar"
+        case .english: return "Cancel"
+        }
     }
 }

@@ -1,13 +1,14 @@
 // Gestió centralitzada del tema visual de l'aplicació (clar / fosc)
-import UIKit
+import SwiftUI
+import Combine
 
 // Tema visual disponible
 enum AppTheme: String {
     case light = "light"
     case dark  = "dark"
 
-    // Estil d'interfície de UIKit corresponent
-    var userInterfaceStyle: UIUserInterfaceStyle {
+    // Esquema de color SwiftUI corresponent
+    var colorScheme: ColorScheme {
         self == .dark ? .dark : .light
     }
 
@@ -22,45 +23,25 @@ enum AppTheme: String {
     }
 }
 
-// Singleton que gestiona el tema visual i envia notificacions de canvi
-final class ThemeManager {
+// Singleton observable que gestiona el tema visual
+final class ThemeManager: ObservableObject {
 
     static let shared = ThemeManager()
-    static let themeChangedNotification = Notification.Name("AppThemeChanged")
     private let themeKey = "selectedAppTheme"
 
-    // Tema actual llegit i guardat a UserDefaults
+    // Tema actual — notifica SwiftUI via objectWillChange i persiste a UserDefaults
     var currentTheme: AppTheme {
-        get {
-            let raw = UserDefaults.standard.string(forKey: themeKey) ?? AppTheme.dark.rawValue
-            return AppTheme(rawValue: raw) ?? .dark
-        }
-        set {
-            UserDefaults.standard.set(newValue.rawValue, forKey: themeKey)
-            applyCurrentTheme()
-            NotificationCenter.default.post(name: Self.themeChangedNotification, object: newValue)
-        }
+        willSet { objectWillChange.send() }
+        didSet  { UserDefaults.standard.set(currentTheme.rawValue, forKey: themeKey) }
     }
 
-    private init() {}
-
-    // Aplica el tema guardat — cridar en iniciar l'app (abans d'usar scenes)
-    func applyToWindow(_ window: UIWindow) {
-        window.overrideUserInterfaceStyle = currentTheme.userInterfaceStyle
-    }
-
-    // Aplica el tema a totes les finestres actives (per als canvis en temps d'execució)
-    func applyCurrentTheme() {
-        for scene in UIApplication.shared.connectedScenes {
-            guard let windowScene = scene as? UIWindowScene else { continue }
-            for window in windowScene.windows {
-                window.overrideUserInterfaceStyle = currentTheme.userInterfaceStyle
-            }
-        }
+    private init() {
+        let raw = UserDefaults.standard.string(forKey: "selectedAppTheme") ?? AppTheme.dark.rawValue
+        self.currentTheme = AppTheme(rawValue: raw) ?? .dark
     }
 }
 
-// MARK: - Paleta de colors adaptativa de l'aplicació
+// MARK: - Paleta de colors UIKit adaptativa
 
 extension UIColor {
 
@@ -136,4 +117,18 @@ extension UIColor {
     static var appMoon: UIColor {
         UIColor(red: 0.8, green: 0.7, blue: 0.3, alpha: 1)
     }
+}
+
+// MARK: - Paleta de colors SwiftUI (envolta la paleta UIKit)
+
+extension Color {
+    static var appBackground:      Color { Color(UIColor.appBackground) }
+    static var appTitle:           Color { Color(UIColor.appTitle) }
+    static var appText:            Color { Color(UIColor.appText) }
+    static var appSubtitle:        Color { Color(UIColor.appSubtitle) }
+    static var appCardBackground:  Color { Color(UIColor.appCardBackground) }
+    static var appTableBackground: Color { Color(UIColor.appTableBackground) }
+    static var appCellBackground:  Color { Color(UIColor.appCellBackground) }
+    static var appAccent:          Color { Color(UIColor.appAccent) }
+    static var appMoon:            Color { Color(UIColor.appMoon) }
 }

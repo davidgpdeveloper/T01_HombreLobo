@@ -1,98 +1,74 @@
-// Controlador de la pantalla de personatges (Tab 3)
-import UIKit
+// Vista de la pantalla de personatges (Tab 3) — SwiftUI
+import SwiftUI
 
-class CharactersViewController: UIViewController {
+struct CharactersView: View {
 
-    // MARK: - Propietats
-    private let viewModel = CharactersViewModel()
-    private let tableView = UITableView()
+    @EnvironmentObject var languageManager: LanguageManager
+    @EnvironmentObject var themeManager: ThemeManager
+    @StateObject private var viewModel = CharactersViewModel()
+    @State private var showingLanguagePicker = false
 
-    // MARK: - Cicle de vida
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-        setupLanguageBarButton()
-        viewModel.delegate = self
-        viewModel.loadCharacters()
-        updateTitle()
-        NotificationCenter.default.addObserver(self,
-            selector: #selector(onLanguageChanged),
-            name: LanguageManager.languageChangedNotification, object: nil)
-        NotificationCenter.default.addObserver(self,
-            selector: #selector(onThemeChanged),
-            name: ThemeManager.themeChangedNotification, object: nil)
-    }
-
-    deinit { NotificationCenter.default.removeObserver(self) }
-
-    // MARK: - Idioma i tema
-    private func updateTitle() {
-        switch LanguageManager.shared.currentLanguage {
-        case .catalan: title = "Personatges"
-        case .spanish: title = "Personajes"
-        case .english: title = "Characters"
+    var body: some View {
+        List(viewModel.characters) { character in
+            NavigationLink(destination: CharacterDetailView(character: character)) {
+                CharacterRowView(character: character)
+            }
+            .listRowBackground(Color.appCellBackground)
         }
-        navigationItem.title = title
-        tabBarItem.title = title
+        .listStyle(.plain)
+        .scrollContentBackground(.hidden)
+        .background(Color.appBackground.ignoresSafeArea())
+        .navigationTitle(navigationTitle)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar { toolbarContent }
+        .confirmationDialog(pickerTitle, isPresented: $showingLanguagePicker, titleVisibility: .visible) {
+            ForEach(AppLanguage.allCases, id: \.self) { lang in
+                Button("\(lang.flagEmoji) \(lang.displayName)") {
+                    languageManager.currentLanguage = lang
+                }
+            }
+            Button(cancelTitle, role: .cancel) {}
+        }
+        .onAppear { viewModel.loadCharacters() }
     }
 
-    @objc private func onLanguageChanged() {
-        updateTitle()
-        setupLanguageBarButton()
-        tableView.reloadData()
+    @ToolbarContentBuilder
+    private var toolbarContent: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing) {
+            HStack(spacing: 12) {
+                Button {
+                    themeManager.currentTheme = themeManager.currentTheme.toggled
+                } label: {
+                    Image(systemName: themeManager.currentTheme.iconName)
+                }
+                Button(languageManager.currentLanguage.barButtonTitle) {
+                    showingLanguagePicker = true
+                }
+            }
+        }
     }
 
-    @objc private func onThemeChanged() {
-        setupLanguageBarButton()
-        tableView.backgroundColor = .appBackground
-        view.backgroundColor = .appBackground
-        tableView.reloadData()
+    private var navigationTitle: String {
+        switch languageManager.currentLanguage {
+        case .catalan: return "Personatges"
+        case .spanish: return "Personajes"
+        case .english: return "Characters"
+        }
     }
 
-    // MARK: - Configuració UI
-    private func setupUI() {
-        view.backgroundColor = .appBackground
-        tableView.backgroundColor = .appBackground
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(CharacterCell.self, forCellReuseIdentifier: CharacterCell.reuseIdentifier)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(tableView)
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
-    }
-}
-
-// MARK: - CharactersViewModelDelegate
-extension CharactersViewController: CharactersViewModelDelegate {
-    func didLoadCharacters() {
-        DispatchQueue.main.async { self.tableView.reloadData() }
-    }
-}
-
-// MARK: - UITableViewDataSource & Delegate
-extension CharactersViewController: UITableViewDataSource, UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfCharacters
+    private var pickerTitle: String {
+        switch languageManager.currentLanguage {
+        case .catalan: return "Selecciona l'idioma"
+        case .spanish: return "Seleccionar idioma"
+        case .english: return "Select language"
+        }
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: CharacterCell.reuseIdentifier, for: indexPath) as! CharacterCell
-        cell.configure(with: viewModel.character(at: indexPath.row))
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { 80 }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let detailVC = CharacterDetailViewController(character: viewModel.character(at: indexPath.row))
-        navigationController?.pushViewController(detailVC, animated: true)
+    private var cancelTitle: String {
+        switch languageManager.currentLanguage {
+        case .catalan: return "Cancel·lar"
+        case .spanish: return "Cancelar"
+        case .english: return "Cancel"
+        }
     }
 }

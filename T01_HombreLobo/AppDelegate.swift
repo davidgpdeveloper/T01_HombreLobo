@@ -1,30 +1,22 @@
-// Punt d'entrada de l'aplicació, gestiona el cicle de vida a nivell d'app
-import UIKit
+// Punt d'entrada SwiftUI de l'aplicació
+import SwiftUI
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+struct T01HombreLoboApp: App {
 
-    func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-    ) -> Bool {
-        // Semina les dades inicials a Core Data si és la primera execució
+    @StateObject private var languageManager = LanguageManager.shared
+    @StateObject private var themeManager   = ThemeManager.shared
+
+    init() {
         DataSeeder.seedIfNeeded()
-        return true
     }
 
-    // MARK: - UISceneSession Lifecycle
-
-    func application(
-        _ application: UIApplication,
-        configurationForConnecting connectingSceneSession: UISceneSession,
-        options: UIScene.ConnectionOptions
-    ) -> UISceneConfiguration {
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    var body: some Scene {
+        WindowGroup {
+            MainTabView()
+                .environmentObject(languageManager)
+                .environmentObject(themeManager)
+                .preferredColorScheme(themeManager.currentTheme.colorScheme)
+        }
     }
-
-    func application(
-        _ application: UIApplication,
-        didDiscardSceneSessions sceneSessions: Set<UISceneSession>
-    ) {}
 }
